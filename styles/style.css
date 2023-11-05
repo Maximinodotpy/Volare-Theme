@@ -1,0 +1,116 @@
+/*!
+Theme Name: Volare
+Theme URI: http://underscores.me/
+Author: Maxim Maeder
+Author URI: https://maximmaeder.com/
+Description: Volare Theme
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: volare
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;700;900&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color-scheme: dark;
+}
+
+h2 {
+  @apply mb-2 text-xl;
+}
+
+
+
+/* Badges */
+
+.badge {
+  @apply inline-flex justify-center px-2 py-1 text-xs font-bold uppercase border rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75;
+}
+
+/* Badge Colors: Neutral, Yellow, Green, Purple */
+.badge-neutral {
+  @apply text-neutral-100 bg-neutral-700/50 border-neutral-200;
+}
+
+.badge-yellow {
+  @apply text-yellow-100 border-yellow-200 bg-yellow-700/50;
+}
+
+.badge-green {
+  @apply text-green-100 border-green-200 bg-green-700/50;
+}
+
+.badge-purple {
+  @apply text-purple-100 border-purple-200 bg-purple-700/50;
+}
+
+
+/* Content Styling */
+
+/* Nest it all in the content class */
+.entry-content h1 {
+  @apply mb-4 text-4xl font-bold;
+}
+
+.entry-content h2 {
+  @apply mb-3 text-3xl font-bold;
+}
+
+.entry-content h3 {
+  @apply mb-2 text-2xl font-bold;
+}
+
+.entry-content h4 {
+  @apply mb-2 text-xl font-bold;
+}
+
+.entry-content h5 {
+  @apply mb-2 text-lg font-bold;
+}
+
+.entry-content h6 {
+  @apply mb-2 text-base font-bold;
+}
+
+/* Paragraph Styles */
+.entry-content p {
+  @apply my-4 text-base;
+}
+
+/* Image Styles */
+.entry-content img {
+  @apply h-auto max-w-full mx-auto my-4;
+}
+
+/* List Styles */
+.entry-content :is(ul, ol) {
+  @apply pl-6 my-4 list-disc;
+}
+
+.entry-content li {
+  @apply mb-2;
+}
+
+/* Table Styles */
+.entry-content table {
+  @apply w-full my-4 border-collapse;
+}
+
+.entry-content :is(th, td) {
+  @apply px-4 py-2 border border-neutral-800;
+}
+
+.entry-content th {
+  @apply font-bold text-left bg-neutral-800;
+}
