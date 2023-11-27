@@ -90,7 +90,7 @@ h2 {
 
 /* Image Styles */
 .entry-content img {
-  @apply h-auto max-w-full mx-auto my-4;
+  @apply h-auto max-w-full mx-auto my-4 rounded-2xl;
 }
 
 /* List Styles */
@@ -113,4 +113,13 @@ h2 {
 
 .entry-content th {
   @apply font-bold text-left bg-neutral-800;
+}
+
+/* Footer Menu */
+.sub-menu {
+  @apply ml-2;
+}
+
+.menu-item-has-children > a {
+  @apply font-bold uppercase;
 }
