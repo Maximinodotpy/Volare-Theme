@@ -16,7 +16,7 @@
 			<?php wp_nav_menu( array(
 				'theme_location' => 'menu-2', // menu-2 is the footer
 				'container' => false,
-				'menu_class' => 'grid grid-cols-2 gap-4 sm:grid-cols-3',
+				'menu_class' => 'grid grid-cols-1 gap-4 sm:grid-cols-3',
 				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 				'fallback_cb' => false
 			) ); ?>
@@ -32,7 +32,7 @@
 			</a>
 			
 			<a href="https://github.com/Maximinodotpy/Volare-Theme" target="_blank" class="flex items-center gap-3">
-				<p class="font-bold uppercase">VOLARE THEME@v1</p>
+				<p class="font-bold uppercase">VOLARE THEME@v<?php echo _VOLARE_VERSION ?></p>
 				<img src="<?php echo get_template_directory_uri() . '/img/github-mark-white.svg'?>" alt="Github Logo" width="28" height="28">
 			</a>
 			

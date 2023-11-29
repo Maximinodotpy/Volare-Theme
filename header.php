@@ -25,8 +25,8 @@
 <div id="page" class="min-h-screen text-white bg-neutral-900">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'volare' ); ?></a>
 
-	<header id="masthead" class="flex items-center justify-between max-w-4xl px-10 py-5 mx-auto site-header">
-		<div class="text-xl font-bold">
+	<header id="masthead" class="flex items-center justify-between max-w-4xl px-5 py-5 mx-auto site-header">
+		<div class="flex items-center gap-3 text-xl font-bold">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :

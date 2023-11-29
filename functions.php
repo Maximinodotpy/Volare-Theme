@@ -7,9 +7,9 @@
  * @package Volare
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( '_VOLARE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_VOLARE_VERSION', '_INP_VOLARE_VERSION' );
 }
 
 /**
@@ -94,8 +94,8 @@ function volare_setup() {
 	add_theme_support(
 		'custom-logo',
 		array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 70,
+			'width'       => 70,
 			'flex-width'  => true,
 			'flex-height' => true,
 		)
@@ -139,10 +139,10 @@ add_action( 'widgets_init', 'volare_widgets_init' );
  * Enqueue scripts and styles.
  */
 function volare_scripts() {
-	wp_enqueue_style( 'volare-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'volare-style', get_stylesheet_uri(), array(), _VOLARE_VERSION );
 	wp_style_add_data( 'volare-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'volare-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'volare-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _VOLARE_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

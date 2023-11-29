@@ -102,6 +102,14 @@ h2 {
   @apply mb-2;
 }
 
+.entry-content a {
+  @apply underline;
+}
+
+.entry-content a[href ^= "http"]:after {
+  content: "↗" ;    
+}
+
 /* Table Styles */
 .entry-content table {
   @apply w-full my-4 border-collapse;
@@ -122,4 +130,10 @@ h2 {
 
 .menu-item-has-children > a {
   @apply font-bold uppercase;
+}
+
+
+/* Custom Logo */
+.custom-logo {
+  width: 70px;
 }
