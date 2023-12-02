@@ -45,18 +45,29 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="hidden main-navigation sm:block">
-			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'volare' ); ?></button> -->
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'menu_class'     => 'flex gap-3 list-none',
-					'before'         => '<div class="hover:underline">',
-					'after'          => '</div>',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+		<div class="group">
+			<button class="flex items-center gap-2 px-3 py-2 font-bold uppercase border rounded-md bg-neutral-800 hover:bg-neutral-700 border-neutral-700 hover:border-neutral-800">
+				<img src="<?php echo get_template_directory_uri() . '/img/more-horizontal.svg' ?>" alt="">
+				<div>Menu</div>
+			</button>
+
+			<nav class="absolute top-0 left-0 z-10 hidden w-full p-6 border-b border-b-neutral-700 group-focus-within:block bg-neutral-800">
+				<div class="max-w-4xl px-5 mx-auto">
+					<div class="mb-3 text-xl font-bold uppercase"><?php bloginfo( 'name' ); ?></div>
+
+					<!-- Show nested nav elements -->
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'menu_class'     => 'flex gap-3 list-none',
+							'before'         => '<div class="hover:underline">',
+							'after'          => '</div>',
+						)
+					);
+					?>
+				</div>
+			</nav>
+		</div>
 	</header><!-- #masthead -->
