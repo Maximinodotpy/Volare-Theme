@@ -104,10 +104,10 @@ h2 {
 
 .entry-content a {
   @apply underline;
-}
+} 
 
 .entry-content a[href ^= "http"]:after {
-  content: "↗" ;    
+  content: "↗" ;
 }
 
 /* Table Styles */
